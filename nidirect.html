@@ -1,0 +1,187 @@
+<div id="sliding-popup" role="alertdialog" aria-describedby="popup-text" style="bottom: 0px;" class="sliding-popup-bottom"><button type="button" class="eu-cookie-withdraw-tab">Cookie settings</button>
+<div class="eu-cookie-compliance-banner" role="alertdialog" aria-label="n i direct cookie preferences" aria-hidden="false">
+  <div class="container grid popup-content" role="presentation">
+    <div id="popup-text" class="eu-cookie-compliance-message" role="presentation">
+      <h2 class="eu-cookie-compliance-title">Cookies on the NISRA website</h2><p>We use some essential cookies to make this service work. We’d like to set additional cookies so we can remember your settings, understand how people use the service and make improvements. Some of our pages allow selected third parties to set cookies – for example, pages that contain YouTube videos or Google Maps.&nbsp;</p>
+              <a href="#" class="find-more-button eu-cookie-compliance-more-button find-more-button-processed" tabindex="0">Find out more about how we use cookies</a>
+          </div>
+
+    
+    <div id="popup-buttons" class="eu-cookie-compliance-buttons" role="presentation">
+      <button class="btn btn--primary agree-button eu-cookie-compliance-secondary-button" tabindex="0">Accept cookies</button>
+              <button class="btn btn--primary decline-button eu-cookie-compliance-default-button" tabindex="0">Reject cookies</button>
+          </div>
+  </div>
+</div></div>
+
+<style>
+  body {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    color: #1c1c1c;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+  }
+  html {
+    font-family: "Lato","Open Sans",sans-serif;
+    font-size: 62.5%;
+    line-height: 1.5;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: subpixel-antialiased;
+    min-height: 100%;
+  }
+  .sliding-popup-bottom {
+    position: fixed;
+  }
+  .sliding-popup-bottom, .sliding-popup-top {
+    width: 100%;
+    z-index: 99999;
+  }
+  button.eu-cookie-withdraw-tab {
+    position: absolute;
+    top: 0;
+    left: -11em;
+    z-index: -1;
+    color: #bebebe;
+    border: 0;
+    width: 11em;
+    height: 50px;
+    padding: 0 50px 0 1em;
+    background-color: #041e34;
+    text-align: right;
+    transform: translate(50px,-50px);
+    transition: left ease .3s;
+  }
+  .btn, button, [type='button'], [type='reset'], [type='submit'] {
+    box-sizing: border-box;
+    display: inline-block;
+    line-height: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    color: #000;
+  }
+  .eu-cookie-compliance-banner, .eu-cookie-withdraw-banner {
+    width: 100%;
+    background: #041e34;
+    padding-bottom: 1.6rem;
+  }
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  div {
+    display: block;
+  }
+  .eu-cookie-compliance-banner .popup-content, .eu-cookie-withdraw-banner .popup-content {
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    -ms-grid-rows: auto 1.5em auto;
+    grid-template-rows: auto auto;
+    grid-row-gap: 1.5em;
+  }
+  .grid {
+    display: -ms-grid;
+    display: grid;
+    grid-column-gap: 24px;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    -ms-grid-rows: -webkit-min-content;
+    -ms-grid-rows: min-content;
+    grid-template-rows: -webkit-min-content;
+    grid-template-rows: min-content;
+  }
+  .container {
+    padding: 0 15px;
+  }
+  .eu-cookie-compliance-message h2, .eu-cookie-withdraw-message h2 {
+    font-size: 2.1rem;
+    line-height: 2.4rem;
+    margin: 3.2rem 0 1.2rem;
+    color: white;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+  }
+  h2 {
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+  }
+  .eu-cookie-compliance-message p:last-of-type, .eu-cookie-withdraw-message p:last-of-type {
+    margin-bottom: 0;
+  }
+  .eu-cookie-compliance-message p, .eu-cookie-withdraw-message p {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    color: white;
+  }
+  /* @media screen and (min-width: 600px)
+    p, pre {
+    margin: 1em 0 1.5em;
+  } */
+  p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+  }
+  .eu-cookie-compliance-message a, .eu-cookie-compliance-message .find-more-button, .eu-cookie-withdraw-message a, .eu-cookie-withdraw-message .find-more-button {
+    color: #00aae5;
+    background-color: rgba(0,0,0,0);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    outline: 0;
+    outline-offset: 0;
+  }
+  /* @supports (display:grid)
+  .grid>* {
+    width: auto !important;
+  } */
+  .eu-cookie-compliance-buttons, .eu-cookie-withdraw-buttons {
+    display: flex;
+    flex-direction: row-reverse;
+    text-align: right;
+    -ms-grid-row-align: end;
+    align-self: end;
+  }
+  .eu-cookie-compliance-buttons .btn:not(.decline-button), .eu-cookie-withdraw-buttons .btn:not(.decline-button) {
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+  }
+  .eu-cookie-compliance-buttons .btn, .eu-cookie-withdraw-buttons .btn {
+    margin-left: 1em;
+  }
+  .btn--primary, .button--primary, #drupal-off-canvas .button--primary {
+    background-color: #0a78cd;
+    border-color: #0a78cd;
+    color: #fff;
+  }
+  .btn, .button, #drupal-off-canvas .button {
+    background-color: #666;
+    border-color: #666;
+    color: #fff;
+    display: inline-block;
+    border: 1px solid transparent;
+    border-radius: 0;
+    text-align: center;
+    text-decoration: none;
+    background-repeat: no-repeat;
+    background-position-y: center;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    min-width: 4.4rem;
+    min-height: 4.4rem;
+    padding: 0.8rem 1.2rem;
+    background-size: 1.60008rem auto;
+  }
+  
+</style>
